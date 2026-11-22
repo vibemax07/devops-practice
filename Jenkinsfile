@@ -3,30 +3,30 @@ pipeline
     agent any
     {
         stages{
-            stage{
+            stage("Checkout"){
             
-            steps(Checkout)
+            steps
             {
                 echo "Checking out the code from the repository"
             }
             }
         
-        stage{
+        stage("Build"){
 
-            steps(Buid)
+            steps
             {
                 echo "Building the code"
             }
         }
-        stage{
+        stage("Test"){
 
-            steps(Test)
+            steps
             {
                 echo "Running the tests"
             }
         }
-        stage{
-            steps(Deploy)
+        stage("Deploy"){
+            steps
             {
                 echo "Deploying the application"
                }
